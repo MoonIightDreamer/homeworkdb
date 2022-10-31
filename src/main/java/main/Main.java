@@ -20,6 +20,21 @@ public class Main {
     private static final String PASSWORD = "password";
 
     public static void main(String[] args) {
-        
+
+        try {
+            Driver driver = new Driver();
+            DriverManager.registerDriver(driver);
+
+        } catch(SQLException e) {
+            System.out.println("Failed to load driver class!");
+        }
+
+        try(Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+                Statement statement = connection.createStatement()) {
+            
+
+        } catch (SQLException e) {
+
+        }
     }
 }
