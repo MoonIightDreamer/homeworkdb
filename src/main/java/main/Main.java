@@ -22,7 +22,7 @@ public class Main {
     public static void main(String[] args) {
 
         try {
-            Driver driver = new Driver();
+            Driver driver = new Driver(); //
             DriverManager.registerDriver(driver);
 
         } catch(SQLException e) {
